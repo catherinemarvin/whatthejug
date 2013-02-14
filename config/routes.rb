@@ -1,4 +1,6 @@
 Whatthejug::Application.routes.draw do
+  resources :images
+
   root :to => "home#index"
   #get "home/index"
 
