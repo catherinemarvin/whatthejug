@@ -1,15 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Url:</b>
-  <%= @image.url %>
-</p>
-
-<p>
-  <b>Unreviewed:</b>
-  <%= @image.unreviewed %>
-</p>
-
+<img src="<%= @image.url %>">
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
