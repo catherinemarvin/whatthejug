@@ -1,5 +1,15 @@
 <h1>Listing images</h1>
 
+<div id="imagesWrapper">
+  <div id="imagesContainer">
+    <% @images.each do |image| %>
+      <div class="box">
+        <img src="<%= image.url %>">
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <table>
   <tr>
     <th>Url</th>
@@ -21,5 +31,9 @@
 </table>
 
 <br />
+
+<script>
+  WTJ.Images.layoutImages($("#imagesContainer"));
+</script>
 
 <%= link_to 'New Image', new_image_path %>
