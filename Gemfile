@@ -23,6 +23,10 @@ end
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
+group :development do
+  gem 'debugger', '~>1.2.1'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
