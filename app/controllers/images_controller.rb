@@ -58,6 +58,10 @@ class ImagesController < ApplicationController
   def update
     @image = Image.find(params[:id])
 
+    tags = params[:image].delete :tags
+
+    @image.tag_list = tags
+
     respond_to do |format|
       if @image.update_attributes(params[:image])
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
