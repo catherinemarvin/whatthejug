@@ -1,6 +1,7 @@
 Whatthejug::Application.routes.draw do
   resources :images
 
+  match "info" => "static#info", :as => "info"
   root :to => "home#index"
   #get "home/index"
 
