@@ -3,6 +3,8 @@
     <img src="<%= @image.url %>">
   </div>
 
+  <%= image_tag @image.data.url %>
+
   Tags: 
 
   <% @image.tags.each do |tag| %>
