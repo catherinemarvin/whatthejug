@@ -23,6 +23,8 @@ end
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
+gem 'paperclip', "~> 3.0"
+
 group :development do
   gem 'debugger', '~>1.2.1'
 end
