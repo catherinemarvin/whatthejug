@@ -1,3 +1,5 @@
 <% @tags.each do |tag| %>
-  <%= tag.name %>
+  <p>
+    <%= tag.name %> (<%= tag.count %>)
+  </p>
 <% end %>
