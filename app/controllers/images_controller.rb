@@ -84,4 +84,9 @@ class ImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # GET /images/tag_cloud
+  def tag_cloud
+    @tags = Image.tag_counts
+  end
 end

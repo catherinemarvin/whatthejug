@@ -2,6 +2,7 @@ Whatthejug::Application.routes.draw do
   resources :images
 
   match "info" => "static#info", :as => "info"
+  match "tags" => "images#tag_cloud", :as => "tag_cloud"
   root :to => "home#index"
   #get "home/index"
 
