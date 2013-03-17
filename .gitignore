@@ -16,3 +16,9 @@
 
 # Ignore .DS_Store
 .DS_Store
+
+# Ignore the upload images
+/public/system
+
+# Do not include the tags file
+tags
