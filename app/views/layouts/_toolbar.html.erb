@@ -4,10 +4,10 @@
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
       </button>
-      <a class ="brand" href="#">What the Jug</a>
+      <%= link_to "What the Jug", root_path, :class => "brand" %>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Submit", new_image_path %></li>
           <li><a href="#">Random</a></li>
           <li><%= link_to "Tags", tag_cloud_path %></li>
