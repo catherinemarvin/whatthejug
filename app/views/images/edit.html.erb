@@ -1,6 +1,15 @@
 <h1>Editing image</h1>
 
-<%= render 'form' %>
+<%= form_for @image do |f| %>
+  <div class="field">
+    <%= f.label :tags %></br> 
+    <%= f.text_field :tags, :value => "", :placeholder => "finn,jake,awesome" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Show', @image %> |
 <%= link_to 'Back', images_path %>
