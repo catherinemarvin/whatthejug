@@ -89,4 +89,17 @@ class ImagesController < ApplicationController
   def tag_cloud
     @tags = Image.tag_counts
   end
+
+  # GET /search?query=tags
+
+  def search
+    query = params[:searchQuery]
+    @images = Image.tagged_with(query.split(","))
+
+    respond_to do |format|
+      format.html { render "index" }
+      format.json { render json: @images }
+    end
+
+  end
 end
