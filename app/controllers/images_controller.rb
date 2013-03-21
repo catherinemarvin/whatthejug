@@ -93,7 +93,7 @@ class ImagesController < ApplicationController
   # GET /search?query=tags
 
   def search
-    query = params[:searchQuery]
+    query = params[:query]
     @images = Image.tagged_with(query.split(","))
 
     respond_to do |format|

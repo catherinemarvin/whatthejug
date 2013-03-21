@@ -1,5 +1,5 @@
 <% @tags.each do |tag| %>
   <p>
-    <%= tag.name %> (<%= tag.count %>)
+  <%= link_to "#{tag.name} (#{tag.count})", search_path(:query => tag.name) %>
   </p>
 <% end %>
