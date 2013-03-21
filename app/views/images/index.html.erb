@@ -1,17 +1,5 @@
 <h1>Listing images</h1>
 
-<div id="imagesWrapper">
-  <div id="imagesContainer">
-    <% @images.each do |image| %>
-      <div class="box">
-        <%= link_to image_tag(image.data.url), image %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<script>
-  WTJ.Images.layoutImages($("#imagesContainer"));
-</script>
+<%= render "display_images" %>
 
 <%= link_to 'New Image', new_image_path %>
