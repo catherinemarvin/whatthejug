@@ -10,6 +10,18 @@ class ImagesController < ApplicationController
     end
   end
 
+  # GET /random
+  # GET /random.json
+
+  def random
+    @images = Image.order("RANDOM()")
+
+    respond_to do |format|
+      format.html { render "index" }
+      format.json { render json: @images }
+    end
+  end
+
   # GET /images/1
   # GET /images/1.json
   def show

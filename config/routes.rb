@@ -4,6 +4,7 @@ Whatthejug::Application.routes.draw do
   match "info" => "static#info", :as => "info"
   match "tags" => "images#tag_cloud", :as => "tag_cloud"
   match "search" => "images#search", :as => "search"
+  match "random" => "images#random", :as => "random"
   root :to => "images#index"
 
   # The priority is based upon order of creation:

@@ -13,6 +13,8 @@ WTJ.Layout.setToolbar = ->
     $("#tagsbtn").addClass("active")
   else if pathname.match(/info/)
     $("#infobtn").addClass("active")
+  else if pathname.match(/random/)
+    $("#randombtn").addClass("active")
   else
     $("#homebtn").addClass("active")
 
