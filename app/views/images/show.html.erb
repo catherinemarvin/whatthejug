@@ -5,13 +5,15 @@
 
   <%= image_tag @image.data.url %>
 
-  Tags: 
+  <div class="imageMenu">
+    Tags: 
 
-  <% @image.tags.each do |tag| %>
-    <%= tag.name %>
-<% end %>
-<br>
+    <% @image.tags.each do |tag| %>
+      <%= tag.name %>
+  <% end %>
+  <br>
 
-  <%= link_to 'Edit', edit_image_path(@image) %> |
-  <%= link_to 'Back', images_path %>
+    <%= link_to 'Edit', edit_image_path(@image) %> |
+    <%= link_to 'Back', images_path %>
+  </div>
 </div>
