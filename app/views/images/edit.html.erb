@@ -3,7 +3,8 @@
 <%= form_for @image do |f| %>
   <div class="field">
     <%= f.label :tags %></br> 
-    <%= f.text_field :tags, :value => "", :placeholder => "finn,jake,awesome" %>
+    <%= f.text_field :tags, :value => "#{@image.tag_list.join(",")}", :placeholder => "finn,jake,awesome" %>
+    <%= f.text_field :source, :value => "#{@image.source}", :placeholder => "http://www.imgur.com" %>
   </div>
 
   <div class="actions">

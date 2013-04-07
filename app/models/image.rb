@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  attr_accessible :unreviewed, :url, :tags
+  attr_accessible :unreviewed, :url, :tags, :source
 
   attr_accessible :data
 
