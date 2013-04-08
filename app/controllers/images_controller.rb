@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+    @images = Image.all :conditions => { :unreviewed => false }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
   # GET /random.json
 
   def random
-    @images = Image.order("RANDOM()")
+    @images = Image.where(unreviewed: false).order("RANDOM()")
 
     respond_to do |format|
       format.html { render "index" }
@@ -58,7 +58,7 @@ class ImagesController < ApplicationController
     end
 
     respond_to do |format|
-      @images = Image.all
+      @images = Image.where(unreviewed: false).all
       format.html { render action: "index" }
     end
 
@@ -112,5 +112,13 @@ class ImagesController < ApplicationController
       format.json { render json: @images }
     end
 
+  end
+
+  def review
+    @images = Image.where(:unreviewed => true).all
+
+    respond_to do |format|
+      format.html { render "index" }
+    end
   end
 end
