@@ -1,6 +1,10 @@
 <% @images.each do |image| %>
   <div class="box">
-    <%= link_to image_tag(image.data.url), image %>
+    <% if session[:admin] %>
+      <%= link_to image_tag(image.data.url), edit_image_path(image) %>
+    <% else %>
+      <%= link_to image_tag(image.data.url), image %>
+    <% end %>
   </div>
 <% end %>
 

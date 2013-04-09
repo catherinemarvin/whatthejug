@@ -115,6 +115,7 @@ class ImagesController < ApplicationController
   end
 
   def review
+    session[:admin] = true
     @images = Image.where(:unreviewed => true).all
 
     respond_to do |format|
