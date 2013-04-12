@@ -25,6 +25,8 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 
 gem 'paperclip', "~> 3.0"
 
+gem "devise"
+
 group :development do
   gem 'debugger', '~>1.2.1'
 end

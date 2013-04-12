@@ -1,4 +1,5 @@
 <%= form_tag "/images", :multipart => true do %>
   <%= file_field_tag "images", :multiple => true, :name => "images[][data]" %>
+  <br>
   <%= submit_tag "Submit", :class => "btn" %>
 <% end %>
