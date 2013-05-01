@@ -7,7 +7,7 @@
     <%= f.text_field :source, :value => "#{@image.source}", :placeholder => "http://www.imgur.com" %>
   </div>
 
-  <% if session[:admin] %>
+  <% if admin_signed_in? %>
     <%= f.label :unreviewed %></br>
     <%= f.check_box :unreviewed %>
   <% end %>

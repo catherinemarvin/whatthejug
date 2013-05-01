@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  
+  before_filter :authenticate_admin!, :only => [:review]
 
   # GET /images
   # GET /images.json
@@ -116,7 +118,6 @@ class ImagesController < ApplicationController
   end
 
   def review
-    session[:admin] = true
     @images = Image.where(:unreviewed => true).all
 
     respond_to do |format|
