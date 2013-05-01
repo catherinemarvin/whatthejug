@@ -4,6 +4,7 @@
   <div class="field">
     <%= f.label :tags %></br> 
     <%= f.text_field :tags, :value => "#{@image.tag_list.join(",")}", :placeholder => "finn,jake,awesome" %>
+    <%= f.label :source %></br>
     <%= f.text_field :source, :value => "#{@image.source}", :placeholder => "http://www.imgur.com" %>
   </div>
 
